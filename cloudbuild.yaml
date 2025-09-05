@@ -1,0 +1,21 @@
+#step 1 -Docker image
+steps:
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build","-t","europe-west6-docker.pkg.dev/akiramenaide-dev/gimme-money/my-app:latest","."]
+
+
+
+#step 2 - Pushing the Docker image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push","europe-west6-docker.pkg.dev/akiramenaide-dev/gimme-money/my-app:latest"]
+
+
+# This section tells Cloud Build to automatically push logs to Cloud Logging
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+
+images:
+  - "europe-west6-docker.pkg.dev/akiramenaide-dev/gimme-money/my-app:latest"
+
+  # keeping gimme-money inline for now in case theres errors.
