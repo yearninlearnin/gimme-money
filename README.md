@@ -1,5 +1,4 @@
 # gimme-money Task 2 
 
-Adding some text for test 
-09-04-25  still doing some testing but this might have to be pushed for now
+09-04-25  Hard stop for now. still doing some testing but will follow up on documentation to knock this out. 
 
